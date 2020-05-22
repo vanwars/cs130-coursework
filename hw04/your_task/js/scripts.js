@@ -59,9 +59,11 @@ const getTracks = (term) => {
             const trackElements = document.querySelectorAll('.track-item');
             for (const item of trackElements) {
                 item.onclick = (ev) => {
-                    const preview_url = ev.srcElement.getAttribute('data-preview-track')
+                    const preview_url = ev.currentTarget.getAttribute('data-preview-track')
                     audioPlayer.setAudioFile(preview_url);
                     audioPlayer.play();
+                    // and update the thumbnail:
+                    document.querySelector('footer .track-item').innerHTML = ev.currentTarget.innerHTML;
                 };
             }
 
