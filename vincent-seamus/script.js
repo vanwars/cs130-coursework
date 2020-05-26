@@ -1,4 +1,4 @@
-url = 'data2019.json';
+url = 'data_2019.json';
 fetch(url)
     .then(response => response.json())
     .then(data => {
