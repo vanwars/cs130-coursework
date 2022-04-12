@@ -1,11 +1,12 @@
-/* You're welcome to change any of this! */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 header, section {
     padding: 20px;
@@ -14,8 +15,68 @@ p, li {
     line-height: 1.5em;
 }
 
-#inspiration {
+header {
     background-color: #F0F0F0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    height: 20vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#tutorials {
+    color: white;
+    background-color: #db504a;
+}
+#homework {
+    background-color: #e4dfda;
+}
+#lecture {
+    color: white;
+    background-color: #48a9a6;
+}
+#inspiration {
+    background-color: #4357ad;
+    color: #fff;
+}
+
+#inspiration a, 
+#inspiration a:link,
+#inspiration a:hover, 
+#inspiration a:visited,
+#lecture a, 
+#lecture a:link,
+#lecture a:hover, 
+#lecture a:visited,
+#tutorials a, 
+#tutorials a:link,
+#tutorials a:hover, 
+#tutorials a:visited
+{
+    color: white;
+}
+
+section {
+    /* border: solid 1px #000; */
+    height: 80vh;
+}
+
+@media screen and (max-width: 1000px){
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    section {
+        height: auto;
+        min-height: 40vh;
+    }
+}
+
+@media screen and (max-width: 500px){
+    main {
+        grid-template-columns: 1fr;
+    }
+    section {
+        height: auto;
+        min-height: auto;
+    }
 }
