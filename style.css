@@ -15,10 +15,12 @@ p, li {
     line-height: 1.5em;
 }
 
-header {
+/* header {
     background-color: #F0F0F0;
-    height: 20vh;
-}
+    height: 15vh;
+    display: flex;
+    align-items: center;
+} */
 
 main {
     display: grid;
@@ -58,10 +60,10 @@ main {
 
 section {
     /* border: solid 1px #000; */
-    height: 80vh;
+    min-height: 100vh;
 }
 
-@media screen and (max-width: 1000px){
+/* @media screen and (max-width: 1000px){
     main {
         grid-template-columns: 1fr 1fr;
     }
@@ -69,14 +71,14 @@ section {
         height: auto;
         min-height: 40vh;
     }
-}
+} */
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 1000px){
     main {
         grid-template-columns: 1fr;
     }
     section {
         height: auto;
-        min-height: auto;
+        min-height: 40vh;
     }
 }
