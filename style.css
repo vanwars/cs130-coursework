@@ -97,4 +97,8 @@ h2 {
         height: auto;
         min-height: 40vh;
     }
+
+    h2 {
+        background: none;
+    }
 }
