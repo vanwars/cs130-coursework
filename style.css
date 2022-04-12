@@ -8,11 +8,12 @@ body {
     margin: 0px;
     font-family: 'Comfortaa', cursive;
 }
-header, section {
+/* header, section {
     padding: 20px;
-}
+} */
 p, li {
     line-height: 1.5em;
+    margin: 0px 20px;
 }
 
 /* header {
@@ -63,6 +64,16 @@ section {
     min-height: 100vh;
 }
 
+h2 {
+    margin: 0px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 /* @media screen and (max-width: 1000px){
     main {
         grid-template-columns: 1fr 1fr;
@@ -75,6 +86,7 @@ section {
 
 .fa-solid {
     font-size: 40px;
+    margin-left: 10px;
 }
 
 @media screen and (max-width: 1000px){
