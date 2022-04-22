@@ -59,6 +59,14 @@ main {
     color: white;
 }
 
+#homework a, 
+#homework a:link,
+#homework a:hover, 
+#homework a:visited
+{
+    color: black;
+}
+
 section {
     /* border: solid 1px #000; */
     min-height: 100vh;
