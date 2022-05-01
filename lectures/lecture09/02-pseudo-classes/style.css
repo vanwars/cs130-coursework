@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+.div1, .div2, .div3 {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+
+
+.div2 {
+    background: purple;
+    transition: background 1s ease-out, opacity 1s ease-out;
+}
+.div2:hover {
+    background: blue;
+    opacity: 0.5;
+}
+
+
+/* .div3 {
+    background: rgb(128, 82, 128);
+    transition: all 1s ease-out;
+}
+
+.div3:active, .div3:focus {
+    background: rgb(211, 152, 235);
+}
+
+.div3:active .hidden-message2, .div3:focus .hidden-message2 {
+    opacity: 1;
+} */

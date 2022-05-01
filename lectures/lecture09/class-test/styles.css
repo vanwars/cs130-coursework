@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    border: solid 1px #000;
+    text-align: center;
+}
+
+.ml4 {
+    font-weight: 900;
+    font-size: 4.5em;
+}
+.ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 30vh;
+    right: 0;
+    opacity: 0; 
+}
