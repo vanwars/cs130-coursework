@@ -85,24 +85,65 @@ const tracks = [
     }
 ];
 
-let i = 0;
-for (const track of tracks) {
-    const template = `
-        <div data-index="${i}" onclick="playSong(event);">
+
+// only outputting the first card:
+
+
+
+// two different loop approaches:
+
+// for...of
+// for (const track of tracks) {
+//     console.log(track);
+//     let template = `
+//         <div>
+//             <img src="${track.image_url}" />
+//             <h2>${track.name}</h2>
+//         </div>`;
+//     document.querySelector('main').innerHTML += template;
+// }
+
+
+// forEach method
+tracks.forEach(track => {
+    let template = `
+        <div data-song="${track.preview_url}" onclick="playSong(event);">
             <img src="${track.image_url}" />
             <h2>${track.name}</h2>
         </div>`;
     document.querySelector('main').innerHTML += template;
-    i += 1;
-}
+});
+
 
 const playSong = ev => {
-    console.log(ev.currentTarget.dataset.index);
-    const idx = Number(ev.currentTarget.dataset.index);
-    console.log(tracks[idx].preview_url);
-    document.querySelector('#audio-source').src = tracks[idx].preview_url;
-    
-    const audio = document.querySelector('audio');
+    const songURL = ev.currentTarget.getAttribute("data-song");
+    console.log(songURL);
+    const audio = document.querySelector('audio')
+    audio.src = songURL;
     audio.load();
     audio.play();
-};
+}
+
+
+
+// let i = 0;
+// for (const track of tracks) {
+//     const template = `
+//         <div data-index="${i}" onclick="playSong(event);">
+//             <img src="${track.image_url}" />
+//             <h2>${track.name}</h2>
+//         </div>`;
+//     document.querySelector('main').innerHTML += template;
+//     i += 1;
+// }
+
+// const playSong = ev => {
+//     console.log(ev.currentTarget.dataset.index);
+//     const idx = Number(ev.currentTarget.dataset.index);
+//     console.log(tracks[idx].preview_url);
+//     document.querySelector('#audio-source').src = tracks[idx].preview_url;
+    
+//     const audio = document.querySelector('audio');
+//     audio.load();
+//     audio.play();
+// };
