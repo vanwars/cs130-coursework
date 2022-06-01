@@ -18,6 +18,8 @@
  * 
  */
 
+let currentIndex = 0;
+
 const images = [
     'images/field1.jpg',
     'images/purple.jpg',
@@ -52,9 +54,37 @@ const handleThumbnailClick = ev => {
     // update the featured image's background image with the
     // background image of the thumbnail that was just clicked:
     document.querySelector('.featured_image').style.backgroundImage = bgImage;
+
+    // update the currentIndex to the index associated with the 
+    // thumbnail the user just clicked on.
+    currentIndex = Number(elem.getAttribute('data-index'));
 }
 
-// 1. create a function to handle the event.
-// 2. Attach that function to the "onclick event."
+// Goal: 
+// 1. Create a function that handles previous
+// 2. Create a function that handles next
+
+const previous = () => {
+    currentIndex -= 1;
+    console.log('Show previous image', currentIndex);
+    console.log(images[currentIndex]);
+};
+
+const next = () => {
+    if (currentIndex < 7) {
+        currentIndex += 1;
+    } else {
+        //reset the index back to the beginning:
+        currentIndex = 0;
+    }
+    console.log('Show next image', currentIndex);
+    console.log(images[currentIndex]);
+    document.querySelector('.featured_image').style.backgroundImage = `
+        url('${images[currentIndex]}')
+    `;
+};
+
+
+
 
 initScreen();

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+main {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#restaurant-detail {
+    border: solid 1px #000;
+}
+
+#map { 
+    height: 80vh; 
+    border: solid 1px #000;
+}
